@@ -17,7 +17,7 @@
         <span class="brand-icon" aria-hidden="true">✦</span>
         <span>PropertyMatch AI</span>
       </a>
-      <a class="nav-cta" href="#formulario">Encontrar imóvel</a>
+      <a class="nav-cta" href="#chat">Conversar com a IA</a>
     </div>
   </header>
 
@@ -29,7 +29,7 @@
           <span class="eyebrow">imobiliário com inteligência artificial</span>
           <h1>O imóvel certo, <em>sem perder tempo</em> a procurar.</h1>
           <p>O PropertyMatch AI recomenda casas para comprar ou arrendar com base no seu orçamento e preferências — e explica porquê.</p>
-          <a class="primary-btn" href="#formulario">Encontrar o meu imóvel <span aria-hidden="true">→</span></a>
+          <a class="primary-btn" href="#chat">Falar com o PropertyMatch <span aria-hidden="true">→</span></a>
         </div>
         <div class="hero-visual">
           <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85" alt="Sala de estar moderna e luminosa com vista panorâmica" />
@@ -60,76 +60,22 @@
     </section>
 
 
-    <section class="form-section" id="formulario">
-      <div class="form-shell">
-        <div class="form-heading">
-          <span class="eyebrow">Vamos encontrar a sua casa</span>
-          <h2>O que procura?</h2>
-          <p>Preencha os detalhes e descubra imóveis que combinam com o seu estilo de vida.</p>
+    <section class="chat-section" id="chat">
+      <div class="chat-shell">
+        <div class="chat-heading">
+          <span class="eyebrow">O seu consultor imobiliário pessoal</span>
+          <h2>Vamos conversar sobre a sua próxima casa.</h2>
+          <p>Conte-me o que procura. Pode responder à sua maneira, sem formulários.</p>
         </div>
-        <form id="property-form">
-          <div class="mode-tabs" role="group" aria-label="Tipo de negócio">
-            <button type="button" class="pill selected" data-mode="Comprar">Comprar</button>
-            <button type="button" class="pill" data-mode="Arrendar">Arrendar</button>
-            <input type="hidden" name="mode" id="mode" value="Comprar" />
+        <div class="chat-panel" role="region" aria-label="Conversa com PropertyMatch AI">
+          <div class="chat-topbar"><span class="status-dot"></span><div><strong>PropertyMatch AI</strong><small>Assistente imobiliário · Demo</small></div><span class="chat-spark">✦</span></div>
+          <div class="chat-messages" id="chat-messages" aria-live="polite">
+            <div class="message assistant"><div class="avatar">✦</div><div class="bubble">Olá! 👋 Sou o PropertyMatch AI. Vou ajudar-te a encontrar um imóvel que combine com o que procuras.<br><br>Começamos pelo básico: <strong>queres comprar ou arrendar?</strong></div></div>
           </div>
-
-          <div class="two-col budget-row">
-            <label>Orçamento mínimo (€)
-              <input name="budgetMin" type="number" min="0" value="150000" placeholder="Ex. 150000" />
-            </label>
-            <label>Orçamento máximo (€)
-              <input name="budgetMax" type="number" min="0" value="350000" placeholder="Ex. 350000" />
-            </label>
-          </div>
-
-          <fieldset>
-            <legend>Localização preferida</legend>
-            <div class="pill-group" data-group="location">
-              <button type="button" class="pill selected">Indiferente</button>
-              <button type="button" class="pill">Lisboa</button>
-              <button type="button" class="pill">Porto</button>
-              <button type="button" class="pill">Braga</button>
-              <button type="button" class="pill">Coimbra</button>
-              <button type="button" class="pill">Faro</button>
-            </div>
-          </fieldset>
-
-          <div class="two-col type-area-row">
-            <fieldset>
-              <legend>Tipologia</legend>
-              <div class="pill-group" data-group="type">
-                <button type="button" class="pill selected">Qualquer</button>
-                <button type="button" class="pill">T0</button>
-                <button type="button" class="pill">T1</button>
-                <button type="button" class="pill">T2</button>
-                <button type="button" class="pill">T3</button>
-                <button type="button" class="pill">T4+</button>
-              </div>
-            </fieldset>
-            <label class="area-label">Área mínima (m²)
-              <input name="area" type="number" min="0" value="50" placeholder="50" />
-            </label>
-          </div>
-
-          <fieldset>
-            <legend>É importante para si...</legend>
-            <div class="pill-group multi" data-group="features">
-              <button type="button" class="pill">Garagem</button>
-              <button type="button" class="pill">Varanda</button>
-              <button type="button" class="pill">Elevador</button>
-              <button type="button" class="pill">Aceita animais</button>
-              <button type="button" class="pill">Perto de escolas</button>
-              <button type="button" class="pill">Perto de transportes</button>
-            </div>
-          </fieldset>
-
-          <label class="description-label">Descreva o seu imóvel ideal
-            <textarea name="description" rows="3" placeholder="Ex.: casa luminosa, sossegada, para um casal com um cão e teletrabalho."></textarea>
-          </label>
-          <button class="primary-btn submit-btn" type="submit"><span aria-hidden="true">✧</span> Ver recomendações</button>
-        </form>
-        <div class="results" id="results" hidden aria-live="polite"></div>
+          <div class="quick-prompts" id="quick-prompts"><button type="button">Quero comprar</button><button type="button">Quero arrendar</button><button type="button">Ainda estou a explorar</button></div>
+          <form class="chat-input-area" id="chat-form"><textarea id="chat-input" rows="1" placeholder="Escreve aqui o que procuras..." aria-label="Escreve uma mensagem"></textarea><button class="send-btn" type="submit" aria-label="Enviar mensagem">➤</button></form>
+          <div class="chat-footnote">✦ Esta demonstração ainda não está ligada a uma IA real.</div>
+        </div>
       </div>
     </section>
   </main>

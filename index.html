@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PropertyMatch AI — encontra casas que combinam contigo." />
+  <title>PropertyMatch AI — O imóvel certo, sem perder tempo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#inicio" aria-label="PropertyMatch AI, início">
+        <span class="brand-icon" aria-hidden="true">✦</span>
+        <span>PropertyMatch AI</span>
+      </a>
+      <a class="nav-cta" href="#formulario">Encontrar imóvel</a>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">imobiliário com inteligência artificial</span>
+          <h1>O imóvel certo, <em>sem perder tempo</em> a procurar.</h1>
+          <p>O PropertyMatch AI recomenda casas para comprar ou arrendar com base no seu orçamento e preferências — e explica porquê.</p>
+          <a class="primary-btn" href="#formulario">Encontrar o meu imóvel <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85" alt="Sala de estar moderna e luminosa com vista panorâmica" />
+          <div class="match-card"><span>Compatibilidade</span><strong>94% match</strong></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="steps-section" aria-label="Como funciona">
+      <div class="steps-grid">
+        <article class="step-card">
+          <div class="step-top"><span class="step-icon">☷</span><span>Passo 1</span></div>
+          <h2>Diga-nos o que procura</h2>
+          <p>Orçamento, zona, tipologia e o que é importante para si. Leva menos de um minuto.</p>
+        </article>
+        <article class="step-card">
+          <div class="step-top"><span class="step-icon">♧</span><span>Passo 2</span></div>
+          <h2>A IA analisa cada imóvel</h2>
+          <p>Compara o seu perfil com os imóveis disponíveis e calcula a compatibilidade.</p>
+        </article>
+        <article class="step-card">
+          <div class="step-top"><span class="step-icon">◎</span><span>Passo 3</span></div>
+          <h2>Receba as 5 melhores opções</h2>
+          <p>Com uma explicação clara do porquê — e do que pode não encaixar.</p>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="form-section" id="formulario">
+      <div class="form-shell">
+        <div class="form-heading">
+          <span class="eyebrow">Vamos encontrar a sua casa</span>
+          <h2>O que procura?</h2>
+          <p>Preencha os detalhes e descubra imóveis que combinam com o seu estilo de vida.</p>
+        </div>
+        <form id="property-form">
+          <div class="mode-tabs" role="group" aria-label="Tipo de negócio">
+            <button type="button" class="pill selected" data-mode="Comprar">Comprar</button>
+            <button type="button" class="pill" data-mode="Arrendar">Arrendar</button>
+            <input type="hidden" name="mode" id="mode" value="Comprar" />
+          </div>
+
+          <div class="two-col budget-row">
+            <label>Orçamento mínimo (€)
+              <input name="budgetMin" type="number" min="0" value="150000" placeholder="Ex. 150000" />
+            </label>
+            <label>Orçamento máximo (€)
+              <input name="budgetMax" type="number" min="0" value="350000" placeholder="Ex. 350000" />
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Localização preferida</legend>
+            <div class="pill-group" data-group="location">
+              <button type="button" class="pill selected">Indiferente</button>
+              <button type="button" class="pill">Lisboa</button>
+              <button type="button" class="pill">Porto</button>
+              <button type="button" class="pill">Braga</button>
+              <button type="button" class="pill">Coimbra</button>
+              <button type="button" class="pill">Faro</button>
+            </div>
+          </fieldset>
+
+          <div class="two-col type-area-row">
+            <fieldset>
+              <legend>Tipologia</legend>
+              <div class="pill-group" data-group="type">
+                <button type="button" class="pill selected">Qualquer</button>
+                <button type="button" class="pill">T0</button>
+                <button type="button" class="pill">T1</button>
+                <button type="button" class="pill">T2</button>
+                <button type="button" class="pill">T3</button>
+                <button type="button" class="pill">T4+</button>
+              </div>
+            </fieldset>
+            <label class="area-label">Área mínima (m²)
+              <input name="area" type="number" min="0" value="50" placeholder="50" />
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>É importante para si...</legend>
+            <div class="pill-group multi" data-group="features">
+              <button type="button" class="pill">Garagem</button>
+              <button type="button" class="pill">Varanda</button>
+              <button type="button" class="pill">Elevador</button>
+              <button type="button" class="pill">Aceita animais</button>
+              <button type="button" class="pill">Perto de escolas</button>
+              <button type="button" class="pill">Perto de transportes</button>
+            </div>
+          </fieldset>
+
+          <label class="description-label">Descreva o seu imóvel ideal
+            <textarea name="description" rows="3" placeholder="Ex.: casa luminosa, sossegada, para um casal com um cão e teletrabalho."></textarea>
+          </label>
+          <button class="primary-btn submit-btn" type="submit"><span aria-hidden="true">✧</span> Ver recomendações</button>
+        </form>
+        <div class="results" id="results" hidden aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+  <footer><span>PropertyMatch AI</span><span>Encontre o lugar onde começa a próxima fase.</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -117,3 +117,10 @@ footer { padding: 25px max(24px, calc((100vw - 1168px)/2)); display: flex; gap: 
 .send-btn:hover { background:#064c51; transform:translateY(-1px); }
 .chat-footnote { padding: 12px 10px 16px; text-align:center; font-size:11px; color:#8a9692; }
 @media(max-width:600px) { .chat-section { padding: 44px 12px 60px; } .chat-heading h2 { font-size:29px; } .chat-messages { padding:16px; min-height:270px; } .quick-prompts { padding:0 14px 14px; } .chat-input-area { margin:0 12px; } }
+
+/* Integração do chat */
+.bubble { white-space: pre-wrap; overflow-wrap: anywhere; min-width: 0; }
+.quick-prompts[hidden] { display: none; }
+.chat-input-area { flex-direction: row; }
+.chat-input-area textarea { min-height: 42px; }
+.send-btn:disabled { opacity: .5; cursor: wait; transform: none; }
